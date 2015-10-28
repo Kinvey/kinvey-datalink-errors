@@ -1,6 +1,6 @@
 {
   "name": "kinvey-datalink-errors",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Error mapping for Datalink Connectors",
   "engines": {
     "node": "= 0.10.x"
