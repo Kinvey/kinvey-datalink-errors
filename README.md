@@ -29,6 +29,7 @@ The library returns the error passed as a Kinvey-formatted error.
   debug: "THe record is not found"
   statusCode: 404
 }
+```
 
 If an error object is passed and it contains a stack trace, the stack trace will also be included in the error object.
 
