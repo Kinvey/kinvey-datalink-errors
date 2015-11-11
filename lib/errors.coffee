@@ -10,6 +10,8 @@
 # or implied. See the License for the specific language governing permissions and limitations under
 # the License.
 
+util = require 'util'
+
 errTypes =
   NotFound:
     error:  "NotFound"
@@ -44,8 +46,17 @@ errTypes =
     description: "The DataLink request experienced a problem. See debug message for details."
     statusCode: 550
 
+KinveyError = (message) ->
+  Error.call this
+  @message = message
+
+util.inherits KinveyError, Error
+
 exports.generateKinveyError = (type, err) ->
   error = errTypes[type] or errTypes["default"]
+
+  kinveyError = new KinveyError error.error
+  kinveyError.
 
   if err instanceof Error
     error.debug = err?.debug or err?.message or err?.name or err?.toString() or {}
