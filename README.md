@@ -37,12 +37,12 @@ If an error object is passed and it contains a stack trace, the stack trace will
 This library exposes the following error types:
 
 
-Error Type    | Description  |
-------------- | -------------|
-NotFound      | Used when an entity is not found.  Note:  This should only be used on getById and deleteById commands.  Otherwise, an empty array should be returned (for getAll, getByQuery) or a count of 0 (for deleteByQuery, countByQuery).|
-BadRequest    | Used for any invalid input - queries, body, etc. |
-Unauthorized  | Used when the operation or user is unauthorized to perform the operation.  |
-Forbidden     | Used when an operation is forbidden. |
-NotAllowed    | Used when the request is not allowed |
-NotImplemented | Used when a specific method is not implemented |
-RuntimeError | Used for any type of runtime error |
+| Error Type    | Description  |
+|------------- | -------------|
+|NotFound      | Used when an entity is not found.  Note:  This should only be used on getById and deleteById commands.  Otherwise, an empty array should be returned (for getAll, getByQuery) or a count of 0 (for deleteByQuery, countByQuery).|
+| BadRequest    | Used for any invalid input - queries, body, etc. |
+| Unauthorized  | Used when the operation or user is unauthorized to perform the operation.  |
+| Forbidden     | Used when an operation is forbidden. |
+| NotAllowed    | Used when the request is not allowed |
+| NotImplemented | Used when a specific method is not implemented |
+| RuntimeError | Used for any type of runtime error |
