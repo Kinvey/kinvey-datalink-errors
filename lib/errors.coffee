@@ -56,15 +56,17 @@ exports.generateKinveyError = (type, err) ->
   error = errTypes[type] or errTypes["default"]
 
   kinveyError = new KinveyError error.error
-  kinveyError.
+  kinveyError.description = error.description
+  kinveyError.statusCode = error.statusCode
 
   if err instanceof Error
-    error.debug = err?.debug or err?.message or err?.name or err?.toString() or {}
+    kinveyError.debug = err?.debug or err?.message or err?.name or err?.toString() or {}
     if err?.stack?
-      error.stack = err.stack
-  else error.debug = err or {}
+      kinveyError.stack = err.stack
+  else
+    kinveyError.debug = err or {}
 
-  return error
+  return kinveyError
 
 
 
