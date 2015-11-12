@@ -16,7 +16,7 @@ errTypes =
   NotFound:
     error:  "NotFound"
     description: "The requested entity or entites were not found in the collection"
-    statusCode: 400
+    statusCode: 404
   BadRequest:
     error: "BadRequest"
     description: "Unable to understand the request"
