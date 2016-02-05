@@ -36,7 +36,7 @@ describe 'process errors of different types', () ->
     myError.message.should.eql 'NotFound'
     myError.description.should.eql 'The requested entity or entites were not found in the collection'
     myError.debug.should.eql 'Debug Text'
-    myError.statusCode.should.eql 400
+    myError.statusCode.should.eql 404
     done()
 
   it 'should process a BadRequest Error', (done) ->
