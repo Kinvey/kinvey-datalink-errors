@@ -1,5 +1,8 @@
 ## Changelog
 
+### v0.2.2
+* Updated copyrights and licenses
+
 ### v0.2.1
 * Fixed NotFound error to be a 404 rather than a 400 error
 
