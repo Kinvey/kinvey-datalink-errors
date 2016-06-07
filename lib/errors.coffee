@@ -41,6 +41,10 @@ errTypes =
     error: "DataLinkRuntimeError"
     description: "The datalink had a runtime error.  See debug message for details"
     statusCode: 550
+  IncorrectContextRoot:
+    error: "IncorrectContextRoot"
+    description: "Incorrect context root specified. See debug message for details"
+    statusCode: 550
   default:
     error: "DataLinkInternalError"
     description: "The DataLink request experienced a problem. See debug message for details."
