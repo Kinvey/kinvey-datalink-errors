@@ -1,5 +1,8 @@
 ## Changelog
 
+### v0.3.0
+* Add toJSON method to KinveyError
+
 ### v0.2.2
 * Updated copyrights and licenses
 
