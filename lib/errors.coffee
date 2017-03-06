@@ -54,6 +54,20 @@ KinveyError = (message) ->
   Error.call this
   @message = message
 
+KinveyError.prototype.toJSON = () ->
+  jsonError =
+    error: @message
+    description: @description
+    debug: @debug
+
+  if @statusCode?
+    jsonError.statusCode = @statusCode
+
+  if @stack?
+    jsonError.stack = @stack
+
+  return jsonError
+
 util.inherits KinveyError, Error
 
 exports.generateKinveyError = (type, err) ->

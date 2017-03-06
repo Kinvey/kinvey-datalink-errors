@@ -30,6 +30,30 @@ describe 'process error debug messages', () ->
     myError.debug.should.eql {}
     done()
 
+  it 'should output an error as raw json', (done) ->
+    myError = errors.generateKinveyError 'NotFound', 'this is a test error'
+    errObj = myError.toJSON()
+    errObj.should.not.be.instanceOf Error
+    errObj.should.be.instanceOf Object
+    errObj.error.should.eql 'NotFound'
+    errObj.description.should.eql 'The requested entity or entites were not found in the collection'
+    errObj.debug.should.eql 'this is a test error'
+    errObj.statusCode.should.eql 404
+    should.not.exist errObj.stack
+    done()
+
+  it 'should output an error as raw json with a stack trace', (done) ->
+    myError = errors.generateKinveyError 'NotFound', new Error 'this is a test error'
+    errObj = myError.toJSON()
+    errObj.should.not.be.instanceOf Error
+    errObj.should.be.instanceOf Object
+    errObj.error.should.eql 'NotFound'
+    errObj.description.should.eql 'The requested entity or entites were not found in the collection'
+    errObj.debug.should.eql 'this is a test error'
+    errObj.statusCode.should.eql 404
+    should.exist errObj.stack
+    done()
+
 describe 'process errors of different types', () ->
   it 'should process a NotFound Error', (done) ->
     myError = errors.generateKinveyError 'NotFound', "Debug Text"
