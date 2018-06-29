@@ -10,16 +10,15 @@
   "engines": {
     "node": "= 0.10.x"
   },
-  "dependencies": {
-    "coffee-script": "1.7.1"
-  },
   "devDependencies": {
-    "mocha": "1.21.4",
-    "should": "3.3.2",
-    "coffeelint": "1.8.1"
+    "eslint": "4.7.2",
+    "eslint-config-kinvey-platform": "kinvey/eslint-kinvey-platform#v0.1.1",
+    "eslint-plugin-import": "2.7.0",
+    "mocha": "5.2.0",
+    "should": "3.3.2"
   },
   "scripts": {
-    "pretest": "./node_modules/.bin/coffeelint --file ./coffeelint.json lib test",
+    "pretest": "./node_modules/.bin/eslint lib test",
     "lint": "npm run pretest",
     "test": "npm run test-unit && npm run test-integration",
     "test-unit": "mocha test/unit/*/*",
