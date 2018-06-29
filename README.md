@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Kinvey/kinvey-datalink-errors.svg?branch=master)](https://travis-ci.org/Kinvey/kinvey-datalink-errors)
+
 # Kinvey Datalink Errors
 
 Create Kinvey-formatted errors for Datalinks
