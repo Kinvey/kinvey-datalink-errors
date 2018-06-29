@@ -1,5 +1,8 @@
 ## Changelog
 
+### v0.3.1
+* Converted to javascript
+
 ### v0.3.0
 * Add toJSON method to KinveyError
 
