@@ -3,7 +3,10 @@
   "version": "0.3.0",
   "description": "Error mapping for Datalink Connectors",
   "license": "Apache-2.0",
-  "repository"   : { "type": "git", "url": "Kinvey/kinvey-datalink-errors" },
+  "repository": {
+    "type": "git",
+    "url": "Kinvey/kinvey-datalink-errors"
+  },
   "engines": {
     "node": "= 0.10.x"
   },
@@ -17,6 +20,10 @@
   },
   "scripts": {
     "pretest": "./node_modules/.bin/coffeelint --file ./coffeelint.json lib test",
-    "test": "mocha test/lib/*"
+    "lint": "npm run pretest",
+    "test": "npm run test-unit && npm run test-integration",
+    "test-unit": "mocha test/unit/*/*",
+    "test-integration": "echo \"No integration tests available for the moment\"",
+    "test-npm-security": "npm audit"
   }
 }
