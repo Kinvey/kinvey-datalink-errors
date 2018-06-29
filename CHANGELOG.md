@@ -1,5 +1,8 @@
 ## Changelog
 
+### 0.3.2
+* Removed coffeescript register in index.js
+
 ### v0.3.1
 * Converted to javascript
 
