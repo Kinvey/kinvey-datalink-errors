@@ -2,4 +2,3 @@
 --reporter spec
 --ui bdd
 --globals currentObject
---require coffee-script/register
