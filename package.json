@@ -1,6 +1,6 @@
 {
   "name": "kinvey-datalink-errors",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Error mapping for Datalink Connectors",
   "license": "Apache-2.0",
   "repository": {
