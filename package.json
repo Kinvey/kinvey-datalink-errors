@@ -12,14 +12,14 @@
   },
   "devDependencies": {
     "eslint": "5.0.1",
-    "eslint-config-kinvey-platform": "kinvey/eslint-kinvey-platform#0.1.2",
+    "eslint-config-kinvey-platform": "kinvey/eslint-kinvey-platform#0.1.3",
     "eslint-plugin-import": "2.13.0",
     "mocha": "5.2.0",
     "should": "3.3.2"
   },
   "scripts": {
     "pretest": "npm run lint",
-    "lint": "./node_modules/.bin/eslint lib test *.js",
+    "lint": "./node_modules/.bin/eslint lib test *.js --color",
     "test": "npm run test-unit && npm run test-integration",
     "test-unit": "mocha test/unit/*/*",
     "test-integration": "echo \"No integration tests available for the moment\"",
