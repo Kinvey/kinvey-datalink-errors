@@ -42,7 +42,7 @@ describe('process error debug messages', () => {
     should.not.exist(errObj.stack);
   });
 
-  return it('should output an error as raw json with a stack trace', () => {
+  it('should output an error as raw json with a stack trace', () => {
     const myError = errors.generateKinveyError('NotFound', new Error('this is a test error'));
     const errObj = myError.toJSON();
     errObj.should.not.be.instanceOf(Error);
@@ -112,7 +112,7 @@ describe('process errors of different types', () => {
     myError.statusCode.should.eql(550);
   });
 
-  return it('should return a default error if the error is unknown', () => {
+  it('should return a default error if the error is unknown', () => {
     const myError = errors.generateKinveyError('SomeRandomError', 'Debug Text');
     myError.message.should.eql('DataLinkInternalError');
     myError.description.should.eql('The DataLink request experienced a problem. See debug message for details.');
