@@ -1,5 +1,12 @@
 ## Changelog
 
+### 0.3.3
+* Change build of node.js version in travis
+* Fixed linting
+* Published to npm
+* Fixed inheritence error
+* Update dependency versions
+
 ### 0.3.2
 * Removed coffeescript register in index.js
 
