@@ -1,5 +1,8 @@
 ## Changelog
 
+### 0.3.4
+* Fixed several security vulnerabilities
+
 ### 0.3.3
 * Change build of node.js version in travis
 * Fixed linting
